@@ -35,3 +35,30 @@ ___ START THE SERVER/APP
 #2
 - post route /api/cows
 - console.log/postman to test
+
+
+## SETUP DATABASE
+
+#1
+- connect to mysql
+     ***ERROR
+        - ERROR 2002 (HY000): Can't connect to local MySQL server through socket '/tmp/mysql.sock'
+
+        #FIX
+           - mysql.server start
+           - mysql -u root
+
+note: what sets your schema sets mysql to this schema
+- mysql -u root < server/schema.sql
+
+#2
+- create Database
+
+#3
+- create table
+
+#4
+- database/index.js
+- secure connection to db
+
+#models/models.js

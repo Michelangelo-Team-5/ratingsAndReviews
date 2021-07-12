@@ -1,13 +1,11 @@
 const mysql = require('mysql');
 
-const connection = mysql.createConnection({
-  host: 'localhost',
-  user: 'student',
-  password: 'student',
-  database: 'YOUR_DATABASE_NAME_HERE'
+const dbConnection = mysql.createConnection({
+  user: 'root',
+  database: 'cows'
 });
 
-connection.connect((err) => {
+dbCconnection.connect((err) => {
   if (err) {
     console.log(err);
   } else {
@@ -22,6 +20,4 @@ connection.connect((err) => {
 
 
 // Don't forget to export your functions!
-module.exports = {
-
-};
+module.exports = dbCconnection;
