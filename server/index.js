@@ -12,8 +12,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/api/cows', (req, res) => {
-  console.log('/api/cows: ya got me!')
-  res.end();
+  return res.json({ xxx: '/api/cows' });
 });
 
 app.listen(PORT, () => {
