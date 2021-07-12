@@ -9,7 +9,13 @@ These instructions are copyrighted material and may not be distributed without p
 
 ## Instructions
 
-Read this entire document before starting your work. Complete the work in order. There is a hints section at the end.
+Read this entire document before starting your work. Complete the work in order.
+
+## Problem Solving Process
+
+Track all of your process work in your repo in the ./process folder. Save any images and notes there. Before you code anything, you should have sufficiently broken down the problem in writing in your notes. Work in an order which allows you to constantly run your code.
+
+__Deliberately practice [Habits for Success](https://learn-2.galvanize.com/content_link/github.com/gSchool/sei.sprint.client-side-concepts/Browser%20Apps,%20jQuery,%20and%20Ajax/keys-to-success.md)__
 
 ## Goal
 
@@ -26,7 +32,7 @@ Stick to using only the official documentation and StackOverflow. Limit your use
 1. For AJAX requests: [jQuery](https://www.npmjs.com/package/jquery), [axios](https://www.npmjs.com/package/axios),or fetch
 1. For database: MySQL (with [mysql](https://www.npmjs.com/package/mysql))
 
-Do not use jQuery for any DOM manipulations.
+Do not use jQuery for any DOM manipulations. Do not use React refs.
 
 ## Bare Minimum Requirements
 
