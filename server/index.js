@@ -15,6 +15,11 @@ app.get('/api/cows', (req, res) => {
   return res.json({ xxx: '/api/cows' });
 });
 
+app.post('/api/cows', (req, res) => {
+  console.log('req.body:  ',req.body);
+  res.json(req.body);
+});
+
 app.listen(PORT, () => {
   console.log(`Server listening at localhost:${3000}!`);
 });

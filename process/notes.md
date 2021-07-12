@@ -30,4 +30,8 @@ ___ START THE SERVER/APP
 
 #1
 - get route /api/cows
-- console.log to test
+- console.log/postman to test
+
+#2
+- post route /api/cows
+- console.log/postman to test
