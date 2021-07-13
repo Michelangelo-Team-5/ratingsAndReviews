@@ -63,3 +63,15 @@ note: what sets your schema sets mysql to this schema
 
 #5
 - models/models.js
+   ***TypeError: callback is not a function create((err, data) => ....
+
+   #forgot to pass req.body into create(req.body, (err, data) => ....
+
+## Front End
+
+- build component Cows to render all cows and manage state
+----- make api call to get all cows in the database
+----- store cows in the state
+----- pass cows to cowlist
+
+- build comoponent cowList to render a cow

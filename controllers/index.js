@@ -6,11 +6,15 @@ module.exports = {
             if (err) {
                 return res.sendStatus(404);
             }
-            res.json(cows)
-        })
+            res.status(400).json(cows)
+        });
     },
-    // post() {
-
-    // }
-
+    post(req, res) {
+        models.create(req.body, (err, newCow) => {
+            if (err) {
+                return res.sendStatus(404);
+            }
+            res.json(newCow);
+        });
+    }
 }

@@ -8,7 +8,10 @@ module.exports = {
         });
     },
 
-    create() {
-
+    create({name, description}, callback) {
+        let query = 'INSERT INTO cows (name, description) VALUE (?,?)';
+        db.query(query, [name, description], (err, results) => {
+            callback(err, results);
+        });
     }
 }
