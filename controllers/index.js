@@ -4,17 +4,20 @@ module.exports = {
     get(req, res) {
         models.getAll((err, cows) => {
             if (err) {
-                return res.sendStatus(404);
+                 res.sendStatus(404);
+            } else {
+                res.status(200).json(cows)
             }
-            res.status(400).json(cows)
         });
     },
     post(req, res) {
         models.create(req.body, (err, newCow) => {
             if (err) {
-                return res.sendStatus(404);
+                res.sendStatus(404);
+            } else {
+
+                res.json(newCow);
             }
-            res.json(newCow);
         });
     }
 }

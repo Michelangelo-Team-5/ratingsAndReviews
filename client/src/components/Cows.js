@@ -1,9 +1,14 @@
 import React from 'react';
 // import CowsList from './CowsList';
 
-const Cows = props => {
+const Cows = ({cows}) => {
     return (
-        <h2>Hi im Cows....</h2>
+        <div>
+           { console.log(cows)}
+            {cows.map(cow => (
+                <h2 key={cow.id}>{cow.name}</h2>
+            ))}
+        </div>
     );
 }
 

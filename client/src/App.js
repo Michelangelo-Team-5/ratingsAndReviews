@@ -1,4 +1,5 @@
 import React from 'react';
+import axios from 'axios';
 import Cows from './components/Cows'
 
 class App extends React.Component {
@@ -7,25 +8,29 @@ class App extends React.Component {
         this.state = {
             cows: []
         };
+        // this.fetchData = this.fetchData.bind(this);
+    }
+
+    fetchData = () => {
+        axios.get('/api/cows')
+        .then(res => {
+            const cows = res.data;
+            this.setState({ cows })
+        })
+        .catch(err => {
+            console.error(err)
+        });
     }
 
     componentDidMount() {
-        console.log('ssss')
-        fetch('/api/cows')
-            .then(res => res.json())
-            .then(result => {
-                console.log('xxx ', result)
-            })
-            .catch(err => {
-                console.error(err)
-            });
+       this.fetchData();
     }
 
     render() {
         return (
             <>
                 <h1>Hello World!!!</h1>
-                 <Cows />
+                 <Cows cows={this.state.cows}/>
             </>
         )
     }
