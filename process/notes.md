@@ -61,4 +61,5 @@ note: what sets your schema sets mysql to this schema
 - database/index.js
 - secure connection to db
 
-#models/models.js
+#5
+- models/models.js

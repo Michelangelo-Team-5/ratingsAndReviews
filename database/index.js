@@ -5,7 +5,7 @@ const dbConnection = mysql.createConnection({
   database: 'cows'
 });
 
-dbCconnection.connect((err) => {
+dbConnection.connect((err) => {
   if (err) {
     console.log(err);
   } else {
@@ -15,9 +15,5 @@ dbCconnection.connect((err) => {
 
 // Your Database Queries Here!!
 
-
-
-
-
 // Don't forget to export your functions!
-module.exports = dbCconnection;
+module.exports = dbConnection;
