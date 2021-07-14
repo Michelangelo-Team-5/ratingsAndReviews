@@ -39,7 +39,7 @@ ___ START THE SERVER/APP
 
 ## SETUP DATABASE
 
-#1
+[X]#1
 - connect to mysql
      ***ERROR
         - ERROR 2002 (HY000): Can't connect to local MySQL server through socket '/tmp/mysql.sock'
@@ -51,17 +51,17 @@ ___ START THE SERVER/APP
 note: what sets your schema sets mysql to this schema
 - mysql -u root < server/schema.sql
 
-#2
+[X]#2
 - create Database
 
-#3
+[X]#3
 - create table
 
-#4
+[X]#4
 - database/index.js
 - secure connection to db
 
-#5
+[X]#5
 - models/models.js
    ***TypeError: callback is not a function create((err, data) => ....
 
@@ -69,9 +69,19 @@ note: what sets your schema sets mysql to this schema
 
 ## Front End
 
-- build component Cows to render all cows and manage state
+[X]- build component Cows to render all cows and manage state
 ----- make api call to get all cows in the database
 ----- store cows in the state
 ----- pass cows to cowlist
-
 - build comoponent cowList to render a cow
+
+[X]#6
+- connect frontend to backend
+
+[X]#7
+- create add component
+---- handleAdd component in App
+---- pass handleAdd from App to Add component
+
+[X]#8
+- create
