@@ -84,4 +84,5 @@ note: what sets your schema sets mysql to this schema
 ---- pass handleAdd from App to Add component
 
 [X]#8
-- create
+- make api call to frontend to post new cow to database
+-

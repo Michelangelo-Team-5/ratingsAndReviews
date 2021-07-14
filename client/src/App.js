@@ -7,11 +7,11 @@ class App extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            cows: [],
-            newCow: {
-                name: '',
-                description: ''
-            }
+            cows: []
+            // newCow: {
+            //     name: '',
+            //     description: ''
+            // }
         };
         // this.fetchData = this.fetchData.bind(this);
     }
@@ -42,9 +42,18 @@ class App extends React.Component {
     // }
 
     handleAdd = (name, description) => {
-
-        console.log('handleAdd ', name, description )
-        // const newCows = [...this.state.cows, { e.target.value }];
+        axios.post('/api/cows', {name, description})
+            .then(res => {
+                let newCows = res.data;
+                // this.setState({ cows: newCows })
+                this.fetchData();
+            })
+            .catch(err => {
+                console.log(err);
+            });
+        // console.log('handleAdd: ', name, description )
+        // const newCows = [...this.state.cows, { name, description  }];
+        // console.log(newCows)
         // this.setState({newCows})
     }
 

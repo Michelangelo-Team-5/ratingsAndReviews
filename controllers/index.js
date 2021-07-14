@@ -15,7 +15,6 @@ module.exports = {
             if (err) {
                 res.sendStatus(404);
             } else {
-
                 res.json(newCow);
             }
         });
