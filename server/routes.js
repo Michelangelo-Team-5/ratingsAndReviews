@@ -1,7 +1,7 @@
 const controller = require('../controllers/index.js')
 const router = require('express').Router();
 
-router.get('/cows', controller.get)
+router.get('/', controller.get)
+router.post('/', controller.post)
 
-router.post('/cows', controller.post)
 module.exports = router;

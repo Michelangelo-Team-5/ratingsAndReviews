@@ -1,39 +1,46 @@
--- ATTN WINDOWS USERS: Some of you might have an easier time just copying and pasting the lines below in to your mysql shell
--- YOUR CODE GOES HERE
--- CREATE YOUR DATABASE
-CREATE DATABASE cows;
-USE cows;
+
+CREATE DATABASE reviews;
+USE reviews;
 
 -- CREATE YOUR TABLES
-CREATE TABLE cows (
-    id INT NOT NULL AUTO_INCREMENT,
-    name VARCHAR(50) NOT NULL,
-    description VARCHAR(250) NOT NULL,
+CREATE TABLE reviews (
+    id serial NOT NULL,
+    product_id INT NOT NULL,
+    rating INT NOT NULL,
+    date DATE NOT NULL,
+    summary text  NOT NULL,
+    body text  NOT NULL,
+    recommended bit NOT NULL,
+    reported bit NOT NULL,
+    reviewer_name text NOT NULL,
+    reviewer_email text NOT NULL,
+    respones text NULL,
+    helpfullness INT NULL,
     PRIMARY KEY (id)
 );
 
--- ADD RECORDS TO YOUR TABLE
-INSERT INTO cows (name, description)
-    VALUES (
-        "Buttercup", "a herbaceous plant with bright yellow cup-shaped flowers,
-        common in grassland and as a garden weed. All kinds are poisonous and
-        generally avoided by livestock."
-    ),
-    (
-        "Daisy", "a small grassland plant that has flowers with a yellow
-         disk and white rays. It has given rise to many ornamental garden."
-    )
+CREATE TABLE reviews_photos (
+    id serial NOT NULL,
+    review_id INT NOT NULL REFERENCES reviews(id),
+    url text  NOT NULL
+);
 
-    -- ,
-    -- (
-    --      "Milkshake", "a cold drink made of milk, a sweet flavoring such as
-    --      fruit or chocolate, and typically ice cream, whisked until it is."
-    -- ),
-    -- (
-    --      "MooDonna",
-    --      "archaic : lady -- used as a form of respectful address."
-    -- ),
-    -- (
-    --      "MooLawn", "a legendary Chinese warrior from the Northern
-    --      and Southern dynasties period (420–589) of Chinese history."
-    -- )
+CREATE TABLE characteristic_reviews (
+    id serial NOT NULL,
+    characteristic_id INT NOT NULL,
+    review_id INT NOT NULL REFERENCES reviews(id),
+    value INT NOT NULL
+);
+
+CREATE TABLE characteristics (
+    id serial NOT NULL,
+    product_id INT NOT NULL,
+    name text  NOT NULL
+);
+
+
+-- ADD RECORDS TO YOUR TABLE
+INSERT INTO reviews (name, )
+    VALUES (
+
+    ))

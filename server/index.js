@@ -14,15 +14,6 @@ app.get('/', (req, res) => {
 });
 
 
-// app.get('/api/cows', (req, res) => {
-//   models.getAll()
-// });
-
-// app.post('/api/cows', (req, res) => {
-//   console.log('req.body:  ',req.body);
-//   res.json(req.body);
-// });
-
 app.listen(PORT, () => {
   console.log(`Server listening at localhost:${3000}!`);
 });
