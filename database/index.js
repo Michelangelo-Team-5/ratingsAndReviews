@@ -1,16 +1,26 @@
-const mysql = require('mysql');
+const pgp = require('pg-promise')();
+// 'postgres://username:password@localhost:5432/reviews'
 
-const dbConnection = mysql.createConnection({
-  user: 'root',
-  database: 'cows'
-});
+const cn = {
+  host: 'localhost',
+  port: 5432,
+  database: 'reviews',
+};
 
-dbConnection.connect((err) => {
-  if (err) {
-    console.log(err);
-  } else {
-    console.log('Connected to MySQL!')
-  }
-});
+const db = pgp(cn);
 
-module.exports = dbConnection;
+// let testConnection = async function () {
+//   try {
+//     const c = await db.connect();
+//     c.done();
+//     return c.client.serverVersion;
+//   } catch(err) {
+//     console.error(err);
+//   }
+// }
+
+// testConnection().then(res => {
+//   console.log(res)
+// })
+
+module.exports = db;
